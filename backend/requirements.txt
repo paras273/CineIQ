@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pandas
+numpy<2
+scikit-learn
+scikit-surprise
+mlflow
+nltk
+transformers
+torch
+pydantic
+python-dotenv
+joblib
+scipy
+requests
