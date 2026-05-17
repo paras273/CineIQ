@@ -1,6 +1,6 @@
 from pathlib import Path
-
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware # Add this import
 
 from backend.app.api.routes_health import router as health_router
 from backend.app.api.routes_profile import router as profile_router
@@ -11,6 +11,18 @@ from backend.app.core.logging import setup_logging
 setup_logging()
 
 app = FastAPI(title="CINEIQ Movie Recommender")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:8501",
+        "https://cineiq-cvyknmqzs4wafxipf2s33n.streamlit.app" 
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(health_router)
 app.include_router(recommend_router)
 app.include_router(profile_router)
