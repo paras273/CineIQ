@@ -16,7 +16,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:8501",
-        "https://cineiq-cvyknmqzs4wafxipf2s33n.streamlit.app" 
+        "https://cineiq-cvyknmqzs4wafxipf2s33n.streamlit.app",
+		"https://synmgbmqermgxsymndkbvb.streamlit.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
