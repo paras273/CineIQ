@@ -1,0 +1,6 @@
+artifacts/
+data/
+.venv/
+mlruns/
+__pycache__/
+.git/
